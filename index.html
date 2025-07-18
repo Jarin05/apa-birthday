@@ -1,0 +1,174 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Apu 🎉</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      background-color: #fff0f5;
+    }.section {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.section.active {
+  display: flex;
+}
+
+.next-button {
+  margin-top: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.birthday-text {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 3em;
+  color: #ff1493;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4; }
+  to { text-shadow: 0 0 20px #ff1493, 0 0 30px #ff1493; }
+}
+
+.emoji-cake {
+  font-size: 100px;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.floating {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.floating span {
+  position: absolute;
+  font-size: 24px;
+  animation: float 10s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+.image-section {
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-section img {
+  max-width: 300px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+</style>
+   <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Pacifico&family=Quicksand&display=swap" rel="stylesheet"> 
+  
+</head>
+<body>
+  <div class="floating">
+    <!-- Add lots of hearts and balloons -->
+    <span>🎈</span><span>❤</span><span>🎈</span><span>💖</span><span>🎈</span>
+    <span>💗</span><span>🎈</span><span>💕</span><span>🎈</span><span>💓</span>
+    <span>🎈</span><span>❤</span><span>🎈</span><span>💖</span><span>🎈</span>
+    <span>💗</span><span>🎈</span><span>💕</span><span>🎈</span><span>💓</span>
+  </div>  <div class="section active" id="section1">
+    <div class="emoji-cake">🎂</div>
+    <div class="cake-caption">Hey Birthday Girl!!🥳</div>
+    <button class="next-button" onclick="nextSection(2)">Next</button>
+  </div>  <div class="section" id="section2">
+    <div class="birthday-text">Happy Birthday.. 😘❤️</div>
+    <button class="next-button" onclick="nextSection(3)">Next</button>
+  </div>  <div class="section" id="section3">
+    <div class="image-section">
+      <img src="apu cake.jpg" alt="Apu with Cake">
+      <p> prettyy ladiee🎀</p>
+    </div>
+    <button class="next-button" onclick="nextSection(4)">Next</button>
+  </div>  <div class="section" id="section4">
+    <div class="memory-title">Sweet Memories💞</div>
+    <div class="gallery">
+      
+      <img src="me apu photo 1.jpg" alt="Memory 1">
+      <img src="me apu photo2.jpg" alt="Memory 2">
+  
+      <img src="us photo3.jpg" alt="Memory 4">
+      <img src="us with ariz photo5.jpg" alt="Memory 5">
+      <br>
+      
+    </div>
+    <button class="next-button" onclick="nextSection(5)">Next</button>
+  </div>  <div class="section final-letter" id="section5">
+    <h2> Heartfilled Wishes💌</h2>
+    <p style="max-width: 600px;"> Dear Apu,  Wishing you endless joy, love, and success.🥰🫶 May Allah bless you and fulfill your all dreams and wishes.😌❣️🤲Valo thako ,sustho thako🤗...Ar haa amr sathe jograh ta aktu kom koro😏...always evabei amr credit card hoye thako😜 Happy Birthday once again! 🎉💖</p>
+
+    <div class="letter-signeture">~MOME😇</div>
+  </div>  <script>
+  let current = 1;
+  function nextSection(id) {
+    document.getElementById(`section${current}`).classList.remove("active");
+    document.getElementById(`section${id}`).classList.add("active");
+    current = id;
+  }
+</script></body>
+</html>
